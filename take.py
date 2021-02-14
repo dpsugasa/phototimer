@@ -1,6 +1,8 @@
 import os
 import sys
 import time
+import dropbox
+import upload
 from datetime import datetime
 from camera import exposureCalc
 from config import config
@@ -63,9 +65,18 @@ def run_loop(base, pause, config):
             print("Capturing " + name + " in " + exposureMode + " mode")
             file_name = base + "/" + path + "/" + name
 
+            '''
+            additional lines for dropbox
+            '''
+            access_token = upload.access_token
+            file_from = file_name
+            file_to = "/Upload_Tester_Checker/" + path + "/" + name
+            upload.DboxUploader(access_token,file_from, file_to).upload_file()
+
             os_command = make_os_command(config, exposureMode, file_name)
             os.system(os_command)
             print("Written: " + file_name)
+
         else:
             print("Shot cancelled during hours of darkness")
 

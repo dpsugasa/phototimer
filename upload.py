@@ -1,8 +1,8 @@
 import dropbox
 
-access_token = 'XXXX'
-file_from = '2021_1_26_19_1611687610393.jpg'  # //local file path
-file_to = '/Upload_Tester_Checker/2021_1_26_19_1611687610393.jpg'  # // dropbox path
+access_token = 'w4gRX-q7YjAAAAAAAAAAAaH7CvcC5YeKLmpkeFUyAcXVWoaVg_KGr47ztajOzKFH'
+#file_from = '2021_1_26_19_1611687610393.jpg'  # //local file path
+#file_to = '/Upload_Tester_Checker/2021_1_26_19_1611687610393.jpg'  # // dropbox path
 
 
 class DboxUploader:
