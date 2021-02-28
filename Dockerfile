@@ -1,6 +1,6 @@
 FROM alexellis2/raspistill:latest
 ENTRYPOINT []
-RUN apt-get update -qy && apt-get install python3.7
+RUN apt-get update -qy && apt-get install -qy python
 COPY . .
 
 VOLUME /var/image/
