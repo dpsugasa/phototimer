@@ -87,7 +87,7 @@ if(__name__ == '__main__'):
         exit()
     else:
     	try:
-            	pauseInterval = int(sys.argv[1])
+            	pauseInterval = 1 #int(sys.argv[1])
             	basePath=config["base_path"]
             	run_loop(basePath,pauseInterval, config)
     	except KeyboardInterrupt:
