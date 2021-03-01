@@ -65,6 +65,9 @@ def run_loop(base, pause, config):
             print("Capturing " + name + " in " + exposureMode + " mode")
             file_name = base + "/" + path + "/" + name
 
+            os_command = make_os_command(config, exposureMode, file_name)
+            os.system(os_command)
+            print("Written: " + file_name)
             '''
             additional lines for dropbox
             '''
@@ -72,10 +75,6 @@ def run_loop(base, pause, config):
             file_from = file_name
             file_to = "/Upload_Tester_Checker/" + path + "/" + name
             upload.DboxUploader(access_token,file_from, file_to).upload_file()
-
-            os_command = make_os_command(config, exposureMode, file_name)
-            os.system(os_command)
-            print("Written: " + file_name)
 
         else:
             print("Shot cancelled during hours of darkness")
