@@ -1,6 +1,11 @@
 FROM debian:jessie
 ENTRYPOINT []
 RUN apt-get update -qy && apt-get install -qy python3
+RUN apt-get update && apt-get install -y \
+    python3-pip \ 
+    curl \
+    git
+    
 COPY . .
 
 VOLUME /var/image/
