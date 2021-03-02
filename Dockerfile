@@ -15,4 +15,4 @@ COPY . .
 
 VOLUME /var/image/
 
-CMD ["python", "take.py", "60"]
+CMD ["python3", "take.py", "60"]
