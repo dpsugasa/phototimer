@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \ 
     curl \
     git
-RUN pip3 install dropbox-api
+RUN pip3 install dropbox
 
 COPY . .
 
