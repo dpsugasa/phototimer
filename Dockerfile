@@ -5,10 +5,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \ 
     curl \
     git
-RUN git clone git://github.com/dropbox/dropbox-sdk-python.git \
-    cd dropbox-sdk-python \
-    python setup.py install
-
+RUN git clone git://github.com/dropbox/dropbox-sdk-python.git
+RUN cd dropbox-sdk-python
+RUN python3 setup.py install
 
 COPY . .
 
