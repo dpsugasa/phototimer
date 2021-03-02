@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian:jessie
 ENTRYPOINT []
 RUN apt-get update -qy && apt-get install -qy python3.6
 COPY . .
