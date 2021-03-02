@@ -1,11 +1,12 @@
-FROM debian:jessie
+FROM debian:buster
 ENTRYPOINT []
 RUN apt-get update -qy && apt-get install -qy python3
 RUN apt-get update && apt-get install -y \
     python3-pip \ 
+    python3-dropbox\
     curl \
     git
-RUN pip3 install dropbox
+#RUN pip3 install dropbox
 
 COPY . .
 
