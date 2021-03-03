@@ -68,14 +68,18 @@ def run_loop(base, pause, config):
             os_command = make_os_command(config, exposureMode, file_name)
             os.system(os_command)
             print("Written: " + file_name)
-            '''
-            additional lines for dropbox
-            '''
-            access_token = upload.access_token
-            file_from = file_name
-            file_to = "/Upload_Tester_Checker/" + path + "/" + name
-            upload.DboxUploader(access_token,file_from, file_to).upload_file()
-
+            
+            try:
+                '''
+                additional lines for dropbox
+                '''
+                access_token = upload.access_token
+                file_from = file_name
+                file_to = "/Upload_Tester_Checker/" + path + "/" + name
+                upload.DboxUploader(access_token,file_from, file_to).upload_file()
+            except:
+                print("Dropbox is struggling")
+                pass
         else:
             print("Shot cancelled during hours of darkness")
 
