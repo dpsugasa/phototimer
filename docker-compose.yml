@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  camera:
+     container_name: capture 
+     build:
+        context: .
+        dockerfile: Dockerfile
+     network_mode: host
+     restart: always
+     volumes:
+        - /opt/vc:/opt/vc
+        - /var/image:/var/image
+        - ./python:/app
+     environment:
+        LD_LIBRARY_PATH: /opt/vc/lib
+        DISPLAY:
+     devices:
+        - "/dev/vchiq:/dev/vchiq"
+     privileged: true
