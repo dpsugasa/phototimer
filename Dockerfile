@@ -6,6 +6,7 @@ RUN apt-get update -qy && apt-get install -qy python3 \
 	pkg-config \
 	python3-setuptools \
 	python3-dropbox \
+	python3-dotenv \
 	git
 
 COPY . .

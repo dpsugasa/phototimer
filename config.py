@@ -9,4 +9,4 @@ config["metering_mode"] = "matrix"
 config["base_path"] = "/var/image"
 config["height"] = 1536
 config["width"] = 2048
-config["quality"] = 35
+config["quality"] = 60

@@ -1,11 +1,16 @@
 import os
 import sys
 import time
-import dropbox
 import upload
 from datetime import datetime
 from camera import exposureCalc
 from config import config
+from dotenv import load_dotenv
+
+load_dotenv()
+
+dropbox_app = os.getenv("app_path")
+dropbox_token = os.getenv("dropbox_access_token")
 
 def try_to_mkdir(path):
     if os.path.exists(path) == False:
@@ -73,9 +78,9 @@ def run_loop(base, pause, config):
                 '''
                 additional lines for dropbox
                 '''
-                access_token = upload.access_token
+                access_token = dropbox_token
                 file_from = file_name
-                file_to = "/Upload_Tester_Checker/" + path + "/" + name
+                file_to = dropbox_app + path + "/" + name
                 upload.DboxUploader(access_token,file_from, file_to).upload_file()
             except:
                 print("Dropbox is struggling")
