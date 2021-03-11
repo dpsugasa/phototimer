@@ -1,6 +1,6 @@
 import dropbox
 
-#access_token = 'CGJHO58HrOoAAAAAAAAAAYBMFqmohmaPzv0vlrU4jEaUImluPFnvfHjDVd2sB9q1'
+#access_token = ''
 #file_from = '2021_1_26_19_1611687610393.jpg'  # //local file path
 #file_to = '/Upload_Tester_Checker/2021_1_26_19_1611687610393.jpg'  # // dropbox path
 
