@@ -9,7 +9,7 @@ Changes:
 * Upgraded the docker image to use the latest Raspian Buster
 * Uses Python 3
 * Uses dotenv for environment variables
-* Added code to automatically upload code to Dropbox
+* Added code to automatically upload photos to Dropbox
 
 Feel free to contact me with questions! dustin.sugasa@gmail.com
 ***
