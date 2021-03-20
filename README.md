@@ -1,6 +1,19 @@
 phototimer - create timelapses with your Raspberry Pi
 ==========
 
+***
+Added some additional functionality to the awesome Raspberry Pi Time Lapse project by Alex Ellis. 
+
+Changes:
+* Upgraded camera module to the Raspberry Pi Hi Quality camera which can accept additional lenses
+* Upgraded the docker image to use the latest Raspian Buster
+* Uses Python 3
+* Uses dotenv for environment variables
+* Added code to automatically upload photos to Dropbox
+
+Feel free to contact me with questions! dustin.sugasa@gmail.com
+***
+
 phototimer gives you a smart way to capture photos for your timelapses. It is smart because it only takes pictures between the hours you specify and creates a useful folder structure. It is simple because it only depends on Python and `raspistill` both of which are normally already available.
 
 ### Blog posts on phototimer:
